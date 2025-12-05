@@ -33,5 +33,3 @@ If you want, I can also:
 ✅ Add screenshots  
 ✅ Add an installation section  
 ✅ Add a “How it works” diagram  
-
-Just tell me!
