@@ -14,7 +14,7 @@ The program demonstrates how lexical analyzers work and can be used as a starter
 - Prints detected **operators and symbols**
 - Handles **punctuation** (parentheses, braces, semicolons)
 - Ignores whitespace
-- Reads input directly from `input.txt`
+- Reads input directly from `lex.txt`
 
 
 ## 🗂 Project Structure
