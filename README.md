@@ -38,3 +38,4 @@ If you need help extending it, feel free to ask!
 📜 License
 
 This project is free to use for educational and personal purposes.
+
