@@ -1,7 +1,8 @@
 %{
 #include <stdio.h>
 
-int keyword_count = 0;  
+int keyword_count = 0;
+int bracket_count = 0; 
 %}
 
 %option noyywrap
@@ -22,7 +23,10 @@ char|double|return|void      {
 
 [+\-*/=<>!]+                 { printf("OPERATORS: %s\n", yytext); }
 
-[\(\)\{\};]                  { printf("BRACKETS: %s\n", yytext); }
+[\(\)\{\};]                  { 
+                                printf("BRACKETS: %s\n", yytext);
+                                bracket_count++;
+                              }
 
 .                            { printf("UNDEFINED: %s\n", yytext); }
 
@@ -33,6 +37,7 @@ int main() {
     yylex();
 
     printf("\nTotal Keywords Found: %d\n", keyword_count);
+    printf("Total Brackets Found: %d\n", bracket_count);
 
     return 0;
 }
