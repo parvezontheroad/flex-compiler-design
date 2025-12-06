@@ -25,11 +25,4 @@ Recognize strings or comments
 Build a full parser using Bison/Yacc
 If you need help extending it, feel free to ask!
 
-📜 License
 
-This project is free to use for educational and personal purposes.
-If you want, I can also:
-✅ Add badges  
-✅ Add screenshots  
-✅ Add an installation section  
-✅ Add a “How it works” diagram  
