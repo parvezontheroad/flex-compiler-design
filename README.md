@@ -26,6 +26,10 @@ it now tracks and displays the **total number of keywords found** in the input.
 Total Keywords Found: 5
 ```
 
+### Shohel Contributions
+
+It provides the total number of brackets.
+
 🧩 Customization
 
 You can modify the lexer rules to:
@@ -38,4 +42,3 @@ If you need help extending it, feel free to ask!
 📜 License
 
 This project is free to use for educational and personal purposes.
-

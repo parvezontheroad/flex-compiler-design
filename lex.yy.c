@@ -468,9 +468,10 @@ char *yytext;
 #line 2 "lex.l"
 #include <stdio.h>
 
-int keyword_count = 0;  
-#line 472 "lex.yy.c"
+int keyword_count = 0;
+int bracket_count = 0; 
 #line 473 "lex.yy.c"
+#line 474 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -687,10 +688,10 @@ YY_DECL
 		}
 
 	{
-#line 9 "lex.l"
+#line 10 "lex.l"
 
 
-#line 693 "lex.yy.c"
+#line 694 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -749,17 +750,17 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 11 "lex.l"
+#line 12 "lex.l"
 { printf("NUMBER: %s\n", yytext); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 12 "lex.l"
+#line 13 "lex.l"
 { printf("DECIMAL: %s\n", yytext); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 14 "lex.l"
+#line 15 "lex.l"
 { 
                                 printf("KEYWORD: %s\n", yytext); 
                                 keyword_count++;   
@@ -767,36 +768,39 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 19 "lex.l"
+#line 20 "lex.l"
 { printf("NAME: %s\n", yytext); }
 	YY_BREAK
 case 5:
 /* rule 5 can match eol */
 YY_RULE_SETUP
-#line 21 "lex.l"
+#line 22 "lex.l"
 { }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 23 "lex.l"
+#line 24 "lex.l"
 { printf("OPERATORS: %s\n", yytext); }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 25 "lex.l"
-{ printf("BRACKETS: %s\n", yytext); }
+#line 26 "lex.l"
+{ 
+                                printf("BRACKETS: %s\n", yytext);
+                                bracket_count++;
+                              }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 27 "lex.l"
+#line 31 "lex.l"
 { printf("UNDEFINED: %s\n", yytext); }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 29 "lex.l"
+#line 33 "lex.l"
 ECHO;
 	YY_BREAK
-#line 799 "lex.yy.c"
+#line 803 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1801,7 +1805,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 29 "lex.l"
+#line 33 "lex.l"
 
 
 int main() {
@@ -1809,6 +1813,8 @@ int main() {
     yylex();
 
     printf("\nTotal Keywords Found: %d\n", keyword_count);
+    printf("Total Brackets Found: %d\n", bracket_count);
 
     return 0;
 }
+
