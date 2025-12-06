@@ -1,11 +1,10 @@
-Flex  Project
+Flex Project
 
 This project contains a simple **Lex/Flex-based lexer** that reads an input file and identifies different types of tokens such as numbers, decimals, reserved words, identifiers, symbols, and punctuation.
 
 The program demonstrates how lexical analyzers work and can be used as a starter template for compiler design or language processing assignments.
 
-
- 🚀 Features
+🚀 Features
 
 - Detects **numbers** (integer values)
 - Detects **decimal numbers**
@@ -15,6 +14,17 @@ The program demonstrates how lexical analyzers work and can be used as a starter
 - Handles **punctuation** (parentheses, braces, semicolons)
 - Ignores whitespace
 - Reads input directly from `lex.txt`
+
+### 🔧 Added by Jakiul — Keyword Counter Feature
+
+This update adds a new feature to the lexer:  
+it now tracks and displays the **total number of keywords found** in the input.
+
+#### ✅ Sample Output
+
+```
+Total Keywords Found: 5
+```
 
 🧩 Customization
 
@@ -28,8 +38,3 @@ If you need help extending it, feel free to ask!
 📜 License
 
 This project is free to use for educational and personal purposes.
-If you want, I can also:
-✅ Add badges  
-✅ Add screenshots  
-✅ Add an installation section  
-✅ Add a “How it works” diagram  
